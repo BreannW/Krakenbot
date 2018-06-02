@@ -1,0 +1,26 @@
+{
+  "name": "Krakenbot",
+  "version": "1.0.0",
+  "description": "A twitch and discord bot for streamers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDrummer/Krakenbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDrummer/Krakenbot/issues"
+  },
+  "homepage": "https://github.com/MrDrummer/Krakenbot#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "pug": "^2.0.3"
+  }
+}
