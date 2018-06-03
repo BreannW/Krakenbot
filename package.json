@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MrDrummer/Krakenbot#readme",
   "dependencies": {
     "koa": "^2.5.1",
+    "koa-mount": "^3.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.3",
     "pug": "^2.0.3"
