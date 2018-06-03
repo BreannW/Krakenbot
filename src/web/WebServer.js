@@ -11,7 +11,10 @@ const router = new Router();
 dashboard = pug.compileFile(path.join(__dirname, 'pug', 'dashboard.pug'));
 
 // serve files in static folder (css, js, images, etc)
-app.use(mount('/static', static(path.join(__dirname, 'static'))));
+app.use(mount('/static', static(path.join(__dirname, 'static'),{
+  // Max age to allow browsers to cache static assets (1 hour)
+  maxage: 3600000
+})));
 
 // rest endpoints
 router.get('/api/', async (ctx)=>{
