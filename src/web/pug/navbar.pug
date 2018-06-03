@@ -1,6 +1,6 @@
 nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top
   a.navbar-brand(href="#")
-    img(src="static/images/kraken.png", alt="Kraken", style="width:40px;")
+    img(src="static/images/logo_text.png", alt="Kraken")
   button.navbar-toggler(type="button",data-toggle="collapse",data-target="#collapsableNavbar")
     span.navbar-toggler-icon
   .collapse.navbar-collapse(id="collapsableNavbar")
@@ -13,3 +13,10 @@ nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top
     ul.navbar-nav
       li.nav-item
         a.nav-link(href="#") Administration
+    // Right hand side of navbar
+    ul.navbar-nav.ml-auto
+      li.nav-item
+        a.nav-link(href="#")
+          span(style="padding-right:10px") Sign In
+          img(src="static/images/kraken.png", alt="Kraken", style="width:40px;")
+        
