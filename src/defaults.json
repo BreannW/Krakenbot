@@ -1,0 +1,23 @@
+{ 
+  "twitch": {
+    "username": "",
+    "client-id": "",
+    "client-secret": "",
+    "tmi-key": ""
+  },
+  "discord": {
+    "login-token": ""
+  },
+  "database": {
+    "server": "localhost",
+    "port": 27017,
+    "user": "krakenbot",
+    "password": "",
+    "dbname": "krakenbot"
+  },
+  "web": {
+    "server": "localhost",
+    "port": 3000,
+    "browser-cache-time": 3600000
+  }
+}

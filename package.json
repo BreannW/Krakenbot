@@ -4,7 +4,10 @@
   "description": "A twitch and discord bot for streamers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive"
+  },
+  "bin": {
+    "krackenbot": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +21,18 @@
   },
   "homepage": "https://github.com/MrDrummer/Krakenbot#readme",
   "dependencies": {
+    "fs-extra": "^6.0.1",
     "koa": "^2.5.1",
     "koa-mount": "^3.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.3",
-    "pug": "^2.0.3"
+    "mongodb": "^3.0.10",
+    "pug": "^2.0.3",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
   }
 }
