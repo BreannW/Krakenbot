@@ -1,6 +1,7 @@
 const rec = {};
 function run(config){
-  require('./web/Webserver.js').start(config['web']);
+  rec.config = config;
+  require('./web/Webserver.js').start(config['web'], rec);
   require('./database/DatabaseConnection.js').start(config['database'], rec);
 }
 

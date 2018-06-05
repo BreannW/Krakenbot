@@ -3,7 +3,8 @@
     "username": "",
     "client-id": "",
     "client-secret": "",
-    "tmi-key": ""
+    "tmi-key": "",
+    "redirect-uri": "http://localhost:3000/auth/twitch"
   },
   "discord": {
     "login-token": ""
