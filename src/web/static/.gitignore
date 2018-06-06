@@ -1,7 +1,4 @@
 node_modules
 package-lock.json
 krakenbot.sublime-workspace
-
-*.sublime-project
-
 *.bat
