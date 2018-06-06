@@ -5,6 +5,6 @@ const dashboard = pug.compileFile(path.join(__dirname, '..', 'pug', 'dashboard.p
 
 module.exports = function(router){
   router.get('/dashboard', async (ctx)=>{
-    ctx.body = dashboard();
+    ctx.body = dashboard({ctx});
   });
 }

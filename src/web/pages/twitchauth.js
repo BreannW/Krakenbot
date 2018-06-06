@@ -52,7 +52,9 @@ module.exports = function(router){
         // We need to using twitches public key decode and verify our id token.
         id: jwt.verify(response.id_token, key, {algorithms: ['RS256']}) 
       };
-      ctx.body = 'Hello ' + package.id.preferred_username;
+      ctx.session.twitch_user = package.id.sub;
+      ctx.redirect('/dashboard');
+      ctx.status = 302;
     } catch (E){
       // If there was an error in there tell the user they are not authenticated.
       ctx.body = E.toString();

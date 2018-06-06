@@ -7,6 +7,7 @@ const bodyParser = require('koa-bodyparser');
 const path = require('path');
 
 const pages = require('./pages');
+const userstate = require('./UserState');
 
 function start(config, rec){
   const app = new koa();
@@ -47,6 +48,8 @@ function start(config, rec){
     ctx.session.views++;
     return next();
   });
+
+  app.use(userstate);
 
   app.use(bodyParser());
 

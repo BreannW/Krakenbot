@@ -22,4 +22,4 @@ class HelixAPI extends RateLimiter {
   }
 }
 
-module.exports = KrakenAPI;
+module.exports = HelixAPI;

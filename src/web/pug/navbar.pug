@@ -7,16 +7,21 @@ nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top
     ul.navbar-nav
       li.nav-item
         a.nav-link(href="#") My Account
-    ul.navbar-nav
       li.nav-item
         a.nav-link(href="#") My Bot
-    ul.navbar-nav
       li.nav-item
         a.nav-link(href="#") Administration
     // Right hand side of navbar
     ul.navbar-nav.ml-auto
-      li.nav-item
-        a.nav-link(href="login/")
-          span(style="padding-right:10px") Sign In
-          img(src="static/images/kraken.png", alt="Kraken", style="width:40px;")
+      if ctx.twitch_user
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#", id="navbarDropdownMenuLink", data-toggle="dropdown" aria-haspopup="true", aria-expanded="false")
+            span(style="padding-right:10px")= 'Hello ' + ctx.twitch_user.display_name 
+            img(src=ctx.twitch_user.profile_image_url, alt="Profile Picture", style="width:40px;")
+          .bg-dark.navbar-dark.dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdownMenuLink")
+            a.nav-link.dropdown-item(href="#") Sign Out
+      else
+        li.nav-item
+          a.nav-link(href="login/")
+            span(style="padding-right:10px") Sign In
         
