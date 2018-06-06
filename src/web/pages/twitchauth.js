@@ -61,4 +61,10 @@ module.exports = function(router){
       ctx.status = 401;
     }
   });
+
+  router.get('/logout', async ctx=>{
+    ctx.session = null;
+    ctx.redirect('/dashboard');
+    ctx.status = 302;
+  });
 }
