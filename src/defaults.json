@@ -19,6 +19,7 @@
   "web": {
     "server": "localhost",
     "port": 3000,
-    "browser-cache-time": 3600000
+    "browser-cache-time": 3600000,
+    "use-db-for-sessions": true
   }
 }

@@ -1,9 +1,8 @@
-const rec = {};
-function run(config, argv){
-  rec.config = config;
-  require('./web/Webserver.js').start(config['web'], rec);
+async function run(config, argv){
+  var rec = {config, argv};
   if (!argv.nodb)
-  require('./database/DatabaseConnection.js').start(config['database'], rec);
+    await require('./database/DatabaseConnection.js').start(config['database'], rec);
+  require('./web/Webserver.js').start(config['web'], rec);
 }
 
 module.exports = {run};
