@@ -16,14 +16,16 @@ if (!module.parent) {
     (argv) => {
       fs.copySync(path.join(__dirname, 'src', 'defaults.json'), argv.file);
     })
-    .command(['run [config]', '$0'], 'run krakenbot', (yargs) => yargs.positional('config', {
+    .command(['run [config]', '$0'], 'run krakenbot', (yargs) => { 
+      return yargs.positional('config', {
         describe: 'Optional config location',
         type: 'string',
         default: path.resolve('config.json'),
         coerce: path.resolve
-      }
-    ), (argv) => {
-      require('./src/Main.js').run(fs.readJsonSync(argv.config));
+      })
+      .boolean('nodb');
+    }, (argv) => {
+      require('./src/Main.js').run(fs.readJsonSync(argv.config), argv);
     })
     .help()
     .argv;
