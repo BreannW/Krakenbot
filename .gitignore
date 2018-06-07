@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
-krakenbot.sublime-workspace.DS_Store
+krakenbot.sublime-workspace
+.DS_Store
