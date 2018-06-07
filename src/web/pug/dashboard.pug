@@ -3,6 +3,10 @@ html(lang="en")
   head
     title= 'KrakenBot'
     include head.pug
+    script(src="/static/js/botcontrol.js")
+    link(rel="stylesheet", href="/static/style/dashboard.css")
   body
     include navbar.pug
+    if ctx.twitch_user
+      button.btn.btn-success(onclick='joinBot()') Join KrakenBot to your Twitch Chat
 

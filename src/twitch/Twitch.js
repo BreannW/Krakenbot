@@ -3,6 +3,7 @@ const request = require('request-promise-native');
 
 const KrakenAPI = require('./api/Kraken.js');
 const HelixAPI = require('./api/Helix.js');
+const Chatbot = require('./Chatbot.js');
 
 const noop = () => {}; // eslint-disable-line no-empty-function
 const reflectors = [
@@ -27,7 +28,7 @@ function buildRoute(api, prefix = "") {
   return new Proxy(noop, handler);
 }
 
-function start(config, rec){
+async function start(config, rec){
   const krakenapi = new KrakenAPI(request.defaults({
         baseUrl: 'https://api.twitch.tv/kraken/',
         headers: {
@@ -60,7 +61,8 @@ function start(config, rec){
     },
     // get hook(){
     //   return buildRoute(webhookapi, 'https://api.twitch.tv/helix');
-    // }
+    // },
+    bot: await Chatbot.start(config, rec)
   }
 }
 

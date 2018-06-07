@@ -1,6 +1,6 @@
 async function run(config, argv){
-  const twitch = require('./twitch/Twitch.js').start(config['twitch'], rec);
-  var rec = {config, argv, twitch};
+  var rec = {config, argv};
+  rec.twitch = await require('./twitch/Twitch.js').start(config['twitch'], rec);
   if (!argv.nodb)
     await require('./database/DatabaseConnection.js').start(config['database'], rec);
   require('./web/Webserver.js').start(config['web'], rec);
