@@ -1,7 +1,75 @@
+
+/* Footer explanation Structure
+ Body background = grey
+.container .background = 0B3D54, with 100%width so it covers the whole page
+.mainbody has a white background and is contained within the .container .background div
+*/
+
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+font-size: 1em;
+    color: #4D4D4D;
+
 }
+html{
+    background: #4D4D4D;
+}
+body {
+    background: #4D4D4D;
+}
+
+/*Main Font Styling */
+/* font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Bungee', cursive; 
+Font size done in EMs for scalability purposes - http://pxtoem.com */
+
+h1, h2, h3, h4, h5, h6{
+font-family: 'Source Sans Pro', sans-serif; 
+font-weight: bold;
+line-height: 1.1;
+margin: 0.5em 0;
+}
+
+h1{
+font-family: 'Bungee',cursive;
+font-size: 2.5em;
+    color: #13608B;
+}
+h2{
+font-size: 2em;
+        color: #13608B;
+
+}
+h3{
+font-size: 1.75em;
+        color: #13608B;
+
+}
+h4{
+font-size: 1.5em;
+        color: #13608B;
+
+}
+h5{
+font-size: 1.25em;
+    font-weight: 600;
+    
+}
+h6{
+font-size: 1em;
+    font-weight: 600;
+}
+
+body {
+    font-size: 1em;
+}
+p, pre {
+margin-bottom: 12px;
+margin-top: 12px; }
+
+
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
@@ -12,7 +80,7 @@ html, body {
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: #3e61b5;
+  background-color: #4D4D4D;
   padding: 15px;
   width: 100%;
   text-align: center;
@@ -20,4 +88,16 @@ footer {
 .wrapper {
 	min-height: 100%;
 	margin-bottom: -50px;
+/*    background:#4D4d4d;*/
+}
+
+.mainbody {
+    background: white;
+    width: 80%;
+}
+
+
+.background{
+    background: #0B3D54;
+    width: 100%;
 }
